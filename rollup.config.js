@@ -1,18 +1,18 @@
-import { terser } from 'rollup-plugin-terser';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import pkg from './package.json';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
+import { dependencies, main } from './package.json';
 
 export default {
-    input: 'src/index.js', // our source file
-    output: {
-        file: pkg.main,
-        format: 'cjs',
-    },
-    external: [...Object.keys(pkg.dependencies || {})],
-    plugins: [
-        resolve(),
-        commonjs(),
-        terser(), // minifies generated bundles
-    ],
+  input: 'src/index.ts', // our source file
+  output: {
+    file: main,
+    format: 'cjs',
+  },
+  external: [...Object.keys(dependencies || {})],
+  plugins: [
+    typescript(),
+    resolve(),
+    commonjs(),
+  ],
 };

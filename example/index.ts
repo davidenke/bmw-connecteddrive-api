@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import API from '../src';
 
 const example = async () => {
