@@ -1,21 +1,20 @@
-import API from '../src';
+import { inspect } from 'util';
+import { API } from '../src';
+import { Region } from '../src/types';
 
 const example = async () => {
-    try {
-        await API.init({
-            region: 'eu',
-            username: 'a@gmail.com',
-            password: 'b',
-            debug: true,
-        });
+  try {
+    const api = new API({
+      region: Region.Europe,
+      username: 'david@enke.dev',
+      password: '********',
+    }, false);
 
-        const currentVehicles = await API.getVehicles();
-        console.log('currentVehicles', currentVehicles);
-        const image = await currentVehicles[0].getImage();
-        console.log('img', image);
-    } catch (e) {
-        console.log('err', e);
-    }
+    const currentVehicles = await api.getVehicles();
+    console.log(inspect(currentVehicles, false, null, true));
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 example();

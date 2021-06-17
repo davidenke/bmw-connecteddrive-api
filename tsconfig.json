@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
     "declaration": true,
+    "declarationDir": ".",
     "lib": ["esnext"],
     "moduleResolution": "node",
     "module": "esnext",
-    "outDir": "dist",
-    "strict": false
+    "strict": true,
+    "target": "esnext"
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "src/**/*.test.ts"
   ]
 }

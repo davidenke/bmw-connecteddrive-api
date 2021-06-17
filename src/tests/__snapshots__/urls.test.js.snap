@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Testing URLS should throw when no region 1`] = `"Unsupported region. Supported values are us|eu|cn"`;

@@ -1,23 +1,23 @@
 {
-    "extends": [
-        "airbnb-base",
-        "prettier"
-    ],
-    "plugins": [
-        "prettier",
-        "jest"
-    ],
-    "rules": {
-        "prettier/prettier": "error",
-        "max-len": [
-            "warn",
-            180
-        ]
-    },
-    "env": {
-        "node": true,
-        "browser": true,
-        "es6": true,
-        "jest": true
-    }
+  "extends": [
+    "airbnb-base",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier",
+    "jest"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "max-len": [
+      "warn",
+      180
+    ]
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest": true
+  }
 }

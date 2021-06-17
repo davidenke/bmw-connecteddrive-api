@@ -11,7 +11,7 @@ export default {
   },
   external: [...Object.keys(dependencies || {})],
   plugins: [
-    typescript(),
+    typescript({tsconfig: './tsconfig.json'}),
     resolve(),
     commonjs(),
   ],
